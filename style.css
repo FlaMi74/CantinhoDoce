@@ -1,0 +1,1000 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --ff-heading: 'Roboto', sans-serif;
+    --ff-name: 'Corinthia', cursive;
+    --ff-nav: 'Lilita One', cursive;
+    --ff-footer: 'Michroma', sans-serif;
+    --ff-pages: 'Belanosima', sans-serif;
+    --ff-phrases: 'Borel', cursive;
+    
+    --hue: 250;
+    --bg-primary: #b19bb1;
+    --fc-primary: hsla(var(--hue), 0%, 100%);
+    --fc-secondary: hsla(var(--hue), 50%, 80%);
+    --fc-secondary-dark: hsla(var(--hue), 100%, 11%, 1);
+    --fc-pages: hsl(300, 100%, 16%);
+
+    font-size: 62.5%;
+    --fs-body: 1.6rem;
+    --fs-body-md: clamp(1.6rem, 1.6rem + 4vw, 1.7rem);
+    --fs-home-md: clamp(1.5rem, 1.5rem + 3vw, 2.2rem);
+    --fs-home: clamp(2rem, 1.8rem + 3vw, 3rem);
+    --fs-nav: clamp(1rem, 1rem + 2vw, 4rem);
+    --fs-nav-sm: clamp(1.4rem, 1.5rem + 3vw, 1.7rem);
+    --fs-nav-sml: clamp(1.6rem, 1.7rem + 4vw, 2rem);
+    --fs-nav-md: clamp(1.8rem, 1.8rem + 3vw, 2.2rem);
+    --fs-nav-mdlg: clamp(1.5rem, 1.3rem + 2vw, 2.4rem);
+    --fs-nav-lg: clamp(1.8rem, 1.6rem + 2.5vw, 2.7rem);
+    --fs-nav-lgg: clamp(2.2rem, 2rem + 3.5vw, 3.1rem);
+    --fs-nav-lggg: clamp(2.5rem, 2.3rem + 3.5vw, 3.5rem);
+}
+
+body {
+    font-family: var(--ff-heading);
+    background-color: var(--bg-primary);
+    color: var(--fc-primary);
+}
+
+.container {
+    margin: 0 auto;
+    height: 100%;
+    min-width: 33.3rem;
+    background: url(./assets/Papel-de-parede.svg);
+    background-size: contain;
+}
+
+header {
+    display: grid;
+    min-width: 29rem;
+    grid-template-columns: 50% 50%;
+    min-height: 14rem;
+    margin: 0 auto;
+    align-items: center;
+    justify-items: center;
+}
+
+header #logo {
+    display: flex;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 7rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    animation: topdown 800ms;
+    margin: 0 auto;
+    justify-items: right;
+}
+
+.nav a {
+    text-align: right;   
+    font-family: var(--ff-nav);
+    font-size: var(--fs-nav);
+    text-decoration: none;
+    color: var(--fc-primary);
+    text-shadow: 2px 1px var(--fc-pages); 
+}
+
+.site {
+    min-width: 33.3rem;
+    height: 100vh;
+}
+
+.page {
+    padding: 0 3rem;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 3rem 0;
+}
+
+.page img {
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+    gap: 3.2rem;
+    animation: downtop 800ms 400ms backwards;
+}
+
+.page .title h1 {
+    text-align: center;
+    font-family: var(--ff-phrases);
+    font-size: var(--fs-nav-sm);
+    font-weight: bold;
+    text-shadow: 2px 1px var(--fc-pages); 
+} 
+
+.card {
+    position: relative;
+    font-family: var(--ff-heading);
+}
+
+.card img {
+    height: 41.6rem;
+    object-fit: cover;
+
+    border-radius: 6px;
+    transition: transform 200ms;
+
+    filter:contrast(1.2)
+}
+
+.card img:hover {
+    transform: scale(1.01);
+    opacity: 0.5;
+}
+
+.card a  {
+    position: absolute;
+
+    color: var(--fc-pages);
+    font-size: var(--fs-home);
+    font-weight: 800;
+
+    text-decoration: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+
+    bottom: 2rem;
+    left: 1rem;
+
+    text-shadow: 2px 1px white;   
+}
+
+.card p {
+    position: absolute;
+    bottom: 5.7rem;
+    left: 1rem;
+    font-family: var(--ff-heading);
+    border-radius: 2rem ;
+    background-color: var(--fc-primary);
+    font-size: var(--fs-body);
+    font-weight: 400;
+    color: var(--fc-secondary-dark);
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.types, .souveniers, .cont, .whoIam {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.types #typesText h1, .souveniers h1, .cont h1, .whoIam #who h1 {
+    text-align: center;
+    margin: 0 0 3rem 0;
+    font-size: var(--fs-nav);
+    text-shadow: 2px 2px var(--fc-pages);
+    font-size: var(--fs-home);
+}
+
+.whoIam #photo img {
+    align-content: center;
+    margin-bottom: 1rem;
+    width: 15rem;
+    height: 17rem;
+    border-radius: 8px;
+}
+
+.whoIam #whoText p {
+    width: 100%;
+    height: 100%;
+    font-size: var(--fs-body-md);
+    text-align: center;
+    color: var(--fc-pages);
+}
+
+.types .candies {
+    display: grid;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.types #typesText h1 {
+    margin: 3rem 0 3rem 0;
+}
+
+.types .candies #imgs {
+    display: grid;
+    margin: 0 auto;
+    max-width: 40rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.3rem;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 6rem;
+}
+
+.types .candies #imgs img {
+    width: 13rem;
+    height: 13rem;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.types .candies .lista {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    min-width: 29rem;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.types .candies .lista img {
+    width: 2.3rem;
+    height: 2.3rem;
+    justify-self: right;
+}
+
+.types .candies .lista  p {
+    color: var(--fc-pages);
+    font-size: var(--fs-home-md);
+    font-family: var(--ff-phrases);
+    line-height: 100%;
+    padding-top: .85rem;
+}
+
+.souveniers {
+    margin: 0 auto;
+    min-width: 29rem;
+    height: 100%;
+}
+
+.souveniers #souvText {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.souveniers #souvText h2 {
+    color: var(--fc-pages);
+    font-family: var(--ff-phrases);
+    font-weight: normal;
+    text-align: center;
+}
+
+.souveniers #souveImg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 4rem;
+}
+
+.souveniers #souveImg img {
+    width: 12rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cont {
+    display: flex;
+    min-width: 29rem;
+    height: 100vh;
+}
+
+.cont #contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 29rem;
+    margin: 0 auto;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.cont #contact #whats , .cont #contact #insta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.cont #contact #whats img {
+    width: 3.9rem;
+    height: 3.9rem;
+    border-radius: 14px;
+}
+
+.cont #contact #insta img {
+    width: 5.1rem;
+    height: 5.1rem;
+}
+
+.cont #contact #whats a {
+    padding-left: 8px ;
+}
+
+.cont #contact #whats a, .cont #contact #insta a {
+    color: var(--fc-pages);
+    font-size: var(--fs-body-md);
+    font-family: var(--ff-phrases);
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.cont .email {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+}
+.cont .email h1 {
+    text-align: center;
+    font-size: var(--fs-home-md);
+}
+
+.cont .email form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: left;
+}
+.cont .email form .controlName input, 
+.cont .email form .controlPhone input,
+.cont .email form .controlMsg textarea {
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    font-family: var(--ff-heading);
+    font-size: var(--fs-body);
+}
+
+.cont .email form .controlMsg textarea {
+    height: 20rem;
+    font-size: var(--fs-body);
+    margin-bottom: 2rem;
+}
+
+.cont .email form .controlBtn {
+    justify-content: center;
+    align-self: center;
+}
+
+.cont .email form .controlBtn input {
+    width: 8rem;
+    background-color: transparent;
+    font-family: var(--ff-phrases);
+    font-size: var(--fs-body-md);
+    color: white;
+    border: none;
+    position: relative;
+    margin-top: 6.3rem;
+    cursor: pointer;
+    margin-left: -6px;
+} 
+
+.cont .email form .controlBtn input:hover,
+.cont .email form .controlBtn img {
+    transform: scale(1.3);
+}
+
+.cont .email form .controlBtn img {
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    margin-left: -10px;
+    margin-top: 1.5rem;
+    opacity: 0.8;
+}
+
+#no404 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#no404 img {
+    margin-bottom: 3rem;
+}
+
+#no404 h1 {
+    font-family: var(--ff-phrases);
+    font-size: var(--fs-nav-lgg);
+    text-shadow: 1px 2px darkmagenta ;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h3 {
+    color: darkmagenta;
+    font-family: var(--ff-footer);
+    font-size: .9rem;
+    margin-top: 2.5rem;
+    border-top: 1px solid darkmagenta;
+    padding: 2px;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }   
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+@media (min-width: 552px) {
+
+.page, .container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    grid-template-columns: 25% 75%;
+    padding: 2rem;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+header #logo {
+    width: 11rem;
+    height: 11rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a {
+    font-size: var(--fs-nav-sm);
+}
+
+.nav a + a{
+    padding-left: 8px;    
+} 
+
+.whoIam #whoText p {
+    font-size: var(--fs-home-md);
+}
+
+.types .candies #imgs {
+    display: grid;
+    margin: 0 auto;
+    max-width: 60rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.types .candies #imgs img {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 10px;
+}
+
+.types .candies .lista {
+    min-width: 29rem;
+    gap: 1rem;
+}
+
+.types .candies .lista img {
+    width: 2.8rem;
+    height: 2.8rem;
+    justify-self: right;
+}
+
+.types .candies .lista  p {
+    font-size: var(--fs-nav-mdlg);
+    padding-top: 1.2rem;
+    padding-left: .5rem;
+}
+
+.souveniers #souvText h2 {
+    font-size: var(--fs-nav-sml);
+    font-weight: normal;
+}
+
+.souveniers #souveImg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 4rem;
+}
+
+.souveniers #souveImg img {
+    width: 17rem;
+    height: 19rem;
+    border-radius: 14px;
+}
+
+.cont {
+    display: flex;
+    min-width: 29rem;
+}
+
+.cont #contact {
+    width: 40rem;
+    gap: 1.5rem;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.cont #contact #whats a {
+    padding-left: 10px;
+}
+
+.cont #contact #insta img {
+    left: 0;
+}
+
+.cont #contact #whats a, .cont #contact #insta a {
+    font-size: var(--fs-nav-mdlg);
+    padding-top: 15px;
+}
+
+.cont .email {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 1rem;
+}
+
+.cont .email h1 {
+    text-align: center;
+    font-size: var(--fs-home-md);
+}
+
+.cont .email form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: left;
+}
+.cont .email form .controlName input, 
+.cont .email form .controlPhone input,
+.cont .email form .controlMsg textarea {
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    font-family: var(--ff-heading);
+    font-size: var(--fs-body);
+}
+
+.cont .email form .controlMsg textarea {
+    height: 20rem;
+    font-size: var(--fs-body);
+}
+
+.cont .email form .controlBtn {
+    justify-content: center;
+    align-self: center;
+}
+
+.cont .email form .controlBtn input {
+    width: 8rem;
+    background-color: transparent;
+    font-family: var(--ff-phrases);
+    font-size: var(--fs-body-md);
+    color: white;
+    border: none;
+    position: relative;
+    margin-top: 6.3rem;
+    cursor: pointer;
+    margin-left: -6px;
+} 
+
+.cont .email form .controlBtn input:hover,
+.cont .email form .controlBtn img {
+    transform: scale(1.3);
+}
+
+.cont .email form .controlBtn img {
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    margin-left: -10px;
+    margin-top: 1.5rem;
+    opacity: 0.8;
+}
+
+footer h3 {
+    font-size: 1rem;
+}
+}
+
+@media (min-width: 650px) {
+    .nav a {
+        font-size: var(--fs-nav-sml);
+    }
+
+    .types #imgs {
+        gap: 2rem;
+    }
+    
+    .types #imgs img {
+        width: 12rem;
+        height: 12rem;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    footer h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 780px) {
+
+    .page, .container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    header {
+        grid-template-columns: 25% 75%;
+        padding: 2rem;
+        margin-bottom: 0;
+    }
+    
+    header #logo {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+    }
+    
+    .nav a {
+        font-size: var(--fs-nav-mdlg);
+    }
+    
+    .nav a + a{
+        padding-left: 14px;    
+    } 
+
+    .page .title h1 {
+        font-size: var(--fs-nav-lg);
+        font-weight: bold;
+        margin: 2rem;
+    }
+
+    .whoIam #photo img {
+        width: 20rem;
+        height: 22rem;
+        border-radius: 10px;
+    }
+
+    .whoIam #whoText p {
+        font-size: var(--fs-home-md);
+    }
+
+    .types .candies #imgs {
+        width: 60rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 6rem;
+    }
+    
+    .types .candies #imgs img {
+        width: 18rem;
+        height: 18rem;
+        border-radius: 14px;
+    }
+    
+    .types .candies .lista {
+        min-width: 30rem;
+    }
+    
+    .types .candies .lista img {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    
+    .types .candies .lista  p {
+        font-size: var(--fs-nav-lgg);
+    }
+
+    .souveniers #souvText {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        width: 70%;
+        justify-content: center;
+    }
+
+    .souveniers #souvText h1 {
+        margin-bottom: 5rem;
+    }
+    
+    .souveniers #souvText h2 {
+        font-size: var(--fs-nav-md);
+        margin-bottom: 3rem;
+        text-shadow: .5px .5px white;
+    }
+    
+    .souveniers #souveImg {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 3rem;
+    }
+    
+    .souveniers #souveImg img {
+        width: 15rem;
+        height: 17rem;
+        border-radius: 14px;
+    }
+
+    footer h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 930px) {
+
+    header {
+        max-width: 110rem;
+        grid-template-columns: 25% 75%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    header #logo {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    .nav {
+        justify-content: left;
+    }
+    
+    .nav a {
+        font-size: var(--fs-nav-lg);
+    }
+
+    .nav a + a{
+        padding-left: 1.8rem;    
+    } 
+
+    main {
+        grid-template-areas: "A B B"
+        "C C D ";
+    }
+
+    main div:nth-child(1) {
+        grid-area: A;
+    }
+    main div:nth-child(2) {
+        grid-area: B;
+    }
+    main div:nth-child(3) {
+        grid-area: C;
+    }
+    main div:nth-child(4) {
+        grid-area: D;
+    }
+    
+    .whoIam #photo img {
+        margin-bottom: 2rem;
+        width: 24rem;
+        height: 26rem;
+        border-radius: 10px;
+    }
+
+    .whoIam #whoText p {
+        font-size: var(--fs-nav-md);
+    }
+
+    .types {
+        display: grid; 
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+    }
+
+    .types #typesText h1 {
+        margin: 3rem 0 4rem 0;
+    }
+    
+    .types .candies {
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        margin: 0 auto;
+    }
+
+    .types .candies #imgs { 
+        width: 40rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 0;
+    }
+
+    .types .candies #imgs img {
+        width: 18rem;
+        height: 18rem;
+        border-radius: 14px;
+    }
+
+    .types .candies .lista {
+        width: 30rem;
+        height: 38rem;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        padding-left: 1.5rem;
+    }
+
+    .types .candies .lista img {
+        width: 3.3rem;
+        height: 3.3rem;
+        justify-self: right;
+    }
+    
+    .types .candies .lista  p {
+        font-size: var(--fs-nav-lg);
+    }
+
+    .cont .email {
+        width: 80%;
+    }
+    
+    .cont .email form .controlBtn input {
+        width: 10rem;
+        font-size: var(--fs-nav-lg);
+        margin-top: 7.8rem;
+        cursor: pointer;
+        margin-left: -3px;
+    } 
+    
+    .cont .email form .controlBtn input:hover {
+        transform: scale(1.3);
+    }
+    
+    .cont .email form .controlBtn img {
+        width: 12rem;
+        height: 13rem;
+    }
+
+}
+
+@media (min-width: 1120px) {
+
+    header {
+        grid-template-columns: 25% 75%;
+        padding: 2rem;
+        margin-bottom: 0;
+        min-height: 23rem;
+    }
+
+    header #logo {
+        display: flex;
+        align-items: center;
+        width: 18rem;
+        height: 18rem;
+        border-radius: 99rem;
+    }
+
+    .nav a {
+        font-size: var(--fs-nav-lgg);
+    }
+
+    .nav a + a {
+        padding-left: 2rem;    
+    } 
+
+    .page .title h1 {
+        font-size: var(--fs-nav-lgg);
+        margin: 3rem;
+    }
+
+    .whoIam #whoText p {
+        font-size: var(--fs-home);
+    }
+
+   .types {
+        width: 100%;
+        margin: 0 auto;
+   }
+
+   .types .candies {
+        display: grid;
+        grid-template-columns: 60% 40% ;
+   }
+
+    .types .candies #imgs { 
+        row-gap: 2rem;
+        column-gap: 2rem;
+
+    }
+
+    .types .candies #imgs img {
+        width: 24rem;
+        height: 20rem;
+    }
+
+    .types .candies .lista { 
+        width: 100%;
+    }
+
+    .types .candies .lista img {
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+    
+    .types .candies .lista  p {
+        font-size: var(--fs-nav-lgg);
+        margin-top: .4rem;
+        line-height: 100%;
+    }
+
+    .souveniers #souvText {
+        width: 60%;
+    }
+    
+    .souveniers #souvText h2 {
+        font-size: var(--fs-nav-mdlg);
+    }
+    
+    .souveniers #souveImg {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 3rem;
+    }
+    
+    .souveniers #souveImg img {
+        width: 18rem;
+        height: 20rem;
+        border-radius: 14px;
+    }
+
+    .cont .email {
+        width: 50%;
+    }
+
+    footer h3 {
+        font-weight: normal;
+        font-size: 1.5rem;
+    }
+}
