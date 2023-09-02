@@ -18,7 +18,7 @@ route(event) {
 handle() {
     const { pathname } = window.location
     const route = this.routes[pathname] || this.routes[404]
-
+    console.log(this.routes[pathname])
     fetch(route)
     .then(data => data.text())
  
