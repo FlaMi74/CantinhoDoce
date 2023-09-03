@@ -21,7 +21,9 @@ handle() {
 
     if (pathname == "/") {
         pathname = "CantinhoDoce/pages/home.html"
-    console.log(pathname)
+    } else {
+        console.log(pathname)
+    }
     const route = this.routes[pathname] || this.routes[404]
     console.log(route)
     fetch(route)
