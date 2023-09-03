@@ -9,17 +9,16 @@ add(routeName, page) {
 route(event) {
     event = event || window.event
     event.preventDefault()
-    
-        
+
     window.history.pushState({}, "", event.target.href)
   
     this.handle()
     }
 
 handle() {
-    const pathVerify = window.location
-    console.log(pathVerify)
-    if (pathVerify == "https://flami74.github.io/CantinhoDoce/") {
+    console.log(window.location.pathname)
+    
+    if (window.location.pathname == "https://flami74.github.io/CantinhoDoce/") {
         const { pathname } = "https://flami74.github.io/CantinhoDoce/pages/home.html"
         console.log(pathname)
     } else {
