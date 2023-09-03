@@ -1,7 +1,5 @@
 import {Router} from "./router.js"
 
-window.route = () => router.route()
-
 const router = new Router()
 
 router.add("/" ,"CantinhoDoce/pages/home.html")
