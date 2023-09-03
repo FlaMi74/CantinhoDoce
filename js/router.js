@@ -18,8 +18,8 @@ route(event) {
 
 handle() {
     const { pathname } = window.location
-
-    if (pathname == "/CantinhoDoce/") {
+    console.log(pathname)
+    if (pathname == "/") {
         pathname = "CantinhoDoce/pages/home.html"
     } else {
         console.log(pathname)
