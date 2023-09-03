@@ -2,6 +2,7 @@ import {Router} from "./router.js"
 
 const router = new Router()
 
+ window.route = () => router.route()
 router.add("/" ,"CantinhoDoce/pages/home.html")
 router.add("/quemsou", "CantinhoDoce/pages/whoIAm.html")
 router.add("/suspiros", "CantinhoDoce/pages/candyType.html")
@@ -13,4 +14,4 @@ console.log(router)
   router.handle()
 
   window.onpopstate = () => router.handle()
-  window.route = () => router.route()
+ 
