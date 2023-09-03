@@ -19,11 +19,11 @@ route(event) {
 handle() {
     const pathVerify = window.location
     console.log(pathVerify)
-    if (pathVerify == "/CantinhoDoce/") {
-         const { pathname } = "CantinhoDoce/pages/home.html"
+    if (pathVerify == "https://flami74.github.io/CantinhoDoce/") {
+        const { pathname } = "https://flami74.github.io/CantinhoDoce/pages/home.html"
         console.log(pathname)
     } else {
-        const { pathname } = pathVerify
+        const { pathname } = window.location
         console.log(pathname)
     }
     const route = this.routes[pathname] || this.routes[404]
