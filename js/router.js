@@ -9,7 +9,8 @@ add(routeName, page) {
 route(event) {
     event = event || window.event
     event.preventDefault()
-  
+    
+        
     window.history.pushState({}, "", event.target.href)
   
     this.handle()
@@ -17,6 +18,9 @@ route(event) {
 
 handle() {
     const { pathname } = window.location
+
+    if (pathname == "/") {
+        pathname = "CantinhoDoce/pages/home.html"
     console.log(pathname)
     const route = this.routes[pathname] || this.routes[404]
     console.log(route)
