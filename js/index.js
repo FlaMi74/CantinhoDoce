@@ -10,8 +10,7 @@ router.add("/lembrancinhas", "CantinhoDoce/pages/souveniers.html")
 router.add("/contato", "CantinhoDoce/pages/contact.html")
 router.add(404, "CantinhoDoce/pages/404.html")
 
-console.log(router)
   router.handle()
 
   window.onpopstate = () => router.handle()
- 
+ window.route = () => router.route()
