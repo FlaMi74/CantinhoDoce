@@ -1,8 +1,9 @@
 import {Router} from "./router.js"
 
+window.route = () => router.route()
+
 const router = new Router()
 
- window.route = () => router.route()
 router.add("/home" ,"CantinhoDoce/pages/home.html")
 router.add("/quemsou", "CantinhoDoce/pages/whoIAm.html")
 router.add("/suspiros", "CantinhoDoce/pages/candyType.html")
