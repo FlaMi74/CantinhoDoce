@@ -2,7 +2,8 @@ import {Router} from "./router.js"
 
 const router = new Router()
 
-router.add("/home" ,"CantinhoDoce/pages/home.html")
+router.add("/CantinhoDoce/", "CantinhoDoce/pages/home.html")
+router.add("/home" , "CantinhoDoce/pages/home.html")
 router.add("/quemsou", "CantinhoDoce/pages/whoIAm.html")
 router.add("/suspiros", "CantinhoDoce/pages/candyType.html")
 router.add("/lembrancinhas", "CantinhoDoce/pages/souveniers.html")
