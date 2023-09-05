@@ -978,7 +978,7 @@ footer h3 {
     }
     
     .souveniers #souveImg {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         column-gap: 2rem;
         row-gap: 3rem;
     }
